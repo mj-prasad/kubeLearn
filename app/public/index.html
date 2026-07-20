@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KubeAdd - Kubernetes Calculator Service</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-decor">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+  </div>
+
+  <main class="container">
+    <header class="app-header">
+      <div class="k8s-badge">Kubernetes Service</div>
+      <h1>KubeAdd</h1>
+      <p class="subtitle">Microservice addition calculator</p>
+    </header>
+
+    <section class="calculator-card">
+      <form id="calc-form">
+        <div class="input-group">
+          <label for="num-a">First Number</label>
+          <input type="number" id="num-a" name="a" step="any" required placeholder="e.g. 15">
+        </div>
+
+        <div class="plus-divider">
+          <span class="plus-icon">+</span>
+        </div>
+
+        <div class="input-group">
+          <label for="num-b">Second Number</label>
+          <input type="number" id="num-b" name="b" step="any" required placeholder="e.g. 27">
+        </div>
+
+        <button type="submit" class="btn-calculate" id="btn-submit">
+          <span>Calculate Sum</span>
+          <div class="btn-glow"></div>
+        </button>
+      </form>
+
+      <div class="result-container id-result" id="result-box">
+        <div class="result-label">Result</div>
+        <div class="result-value" id="result-val">-</div>
+        <div class="result-expression" id="result-expr">Please enter numbers to calculate</div>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <p>Endpoints: <code class="endpoint">GET /api/add?a={num}&b={num}</code> | <code class="endpoint">GET /healthz</code></p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
