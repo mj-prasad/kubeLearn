@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: calculator
-        image: kube-calc-service:latest
+        image: 717952411043.dkr.ecr.eu-north-1.amazonaws.com/kube-calc-service:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
